@@ -1,6 +1,7 @@
 from person import Person
 import time
 from matplotlib import pyplot as plt
+import numba 
 
 def main():
 	
@@ -10,7 +11,7 @@ def main():
 	for n in nlist:
 		# #Runnning with pure python
 		# time_start1 = time.perf_counter()
-		# result = fib(n)
+		# result = fib_py(n)
 		# time_stop1 = time.perf_counter()
 		# #pythonTimes.append(time_stop1-time_start1)
 		# print("For n=",n,"time passed is ",time_stop1-time_start1)
@@ -42,7 +43,7 @@ def main():
 	# result = f.fib()
 	# time_stop = time.perf_counter()
 	# print("C++ Fibonacci Execution  /n", "The result is = ", result, "Time elapsed = ", time_stop-time_start, "seconds")
-def fib(n):
+def fib_py(n):
 	if n <= 1:
 		return n
 	else:
