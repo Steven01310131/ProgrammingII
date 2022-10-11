@@ -1,28 +1,28 @@
-from person import Person
+# from person import Person
 import time
 from matplotlib import pyplot as plt
-import numba 
+from numba import njit
 
 def main():
 	
 	pythonTimes = []
 	cplusplustimes = []
-	nlist = [30,35,36,37] # enter 30,40,45 for the long run
+	nlist = [30,35,36,37,40,41] # enter 30,40,45 for the long run
 	for n in nlist:
-		# #Runnning with pure python
-		# time_start1 = time.perf_counter()
-		# result = fib_py(n)
-		# time_stop1 = time.perf_counter()
-		# #pythonTimes.append(time_stop1-time_start1)
-		# print("For n=",n,"time passed is ",time_stop1-time_start1)
+		#Runnning with pure python
+		time_start1 = time.perf_counter()
+		result = fib_numba(n)
+		time_stop1 = time.perf_counter()
+		#pythonTimes.append(time_stop1-time_start1)
+		print("For n=",n,"time passed is ",time_stop1-time_start1)
 		#Running with C++
-		time_start2 = time.perf_counter()
-		f = Person(n)
-		f.fib()
-		time_stop2 = time.perf_counter()
-		print("n is", n)
-		cplusplustimes.append(time_stop2-time_start2)
-		print("C++ Fibonacci Execution /n", "The result is = Time elapsed = ", time_stop2-time_start2, "seconds")
+		# time_start2 = time.perf_counter()
+		# f = Person(n)
+		# f.fib()
+		# time_stop2 = time.perf_counter()
+		# print("n is", n)
+		# cplusplustimes.append(time_stop2-time_start2)
+		# print("C++ Fibonacci Execution /n", "The result is = Time elapsed = ", time_stop2-time_start2, "seconds")
 	# print("The length of the lists is", len(pythonTimes))
 	# #print(pythonTimes)
 	# plt.plot(nlist, pythonTimes, color = 'red', label = "Python")
@@ -48,6 +48,13 @@ def fib_py(n):
 		return n
 	else:
 		return(fib_py(n-1) + fib_py(n-2)) 
+
+@njit
+def fib_numba(n):
+	if n <= 1:
+		return n
+	else:
+		return(fib_numba(n-1) + fib_numba(n-2)) 
 
 
 if __name__ == '__main__':
