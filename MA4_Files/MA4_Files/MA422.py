@@ -1,4 +1,4 @@
-# from person import Person
+from person import Person
 import time
 from matplotlib import pyplot as plt
 from numba import njit
@@ -16,12 +16,12 @@ def main():
 		#pythonTimes.append(time_stop1-time_start1)
 		print("For n=",n,"time passed is ",time_stop1-time_start1)
 		#Running with C++
-		# time_start2 = time.perf_counter()
-		# f = Person(n)
-		# f.fib()
-		# time_stop2 = time.perf_counter()
-		# print("n is", n)
-		# cplusplustimes.append(time_stop2-time_start2)
+		time_start2 = time.perf_counter()
+		f = Person(n)
+		f.fib()
+		time_stop2 = time.perf_counter()
+		print("n is", n)
+		cplusplustimes.append(time_stop2-time_start2)
 		# print("C++ Fibonacci Execution /n", "The result is = Time elapsed = ", time_stop2-time_start2, "seconds")
 	# print("The length of the lists is", len(pythonTimes))
 	# #print(pythonTimes)

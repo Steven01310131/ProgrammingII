@@ -20,20 +20,21 @@ def highorderV(n,d):
 
 if __name__ == "__main__":
     start=pc()
-    highorderV(10000000,11)
+    V=highorderV(10000000,11)
     end=pc()
     print(f"Time required without multiprocessing is {round(end-start, 2)} seconds")
+    print("Calculated V without multiprocessing:",V)
 
     start=pc()
     k=0
     with future.ProcessPoolExecutor() as ex :
         p=[1000000 for i in range(10)]
-        L=[11 for i in range(11)]
+        L=[11 for i in range(10)]
         results=ex.map(highorderV,p,L)
 
         for r in results:
             k+=r
-        print(k/10)
             
     end=pc()
     print(f"Time required with multiprocessing is {round(end-start, 2)} seconds")
+    print("Calculated V without multiprocessing:",k/10)
