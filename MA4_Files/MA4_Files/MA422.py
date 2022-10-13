@@ -52,7 +52,7 @@ def main():
 	"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 	"Output in terminal for n=47 with C++ execution                                                     "
 	"C++ Fibonacci Execution  /n The result is =  -1323752223 Time elapsed =  20.691632530999414 seconds"
-	"                                                                                                   "
+	"The result is because we define it as integer and the number is so big that it is outside of range "                                                                                         "
 	"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 def fib_py(n):
 	if n <= 1:

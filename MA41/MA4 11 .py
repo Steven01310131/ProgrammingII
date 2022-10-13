@@ -51,3 +51,6 @@ plt.savefig("Monte carlo for n=100000.png")
 # Builtin constant π  3.141592653589793
 
 # for n=100000
+# number of points inside the circle 7806
+# Approximation of π= 3.1224
+# Builtin constant π  3.141592653589793

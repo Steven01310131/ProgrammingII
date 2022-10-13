@@ -20,3 +20,8 @@ def highorderV(n,d):
 highorderV(100000,2)
 print()
 highorderV(1000000,11)
+# the theoretical V for for d= 2 is 3.141592653589793
+# the monte carlo approximation for n= 100000 and d= 2 is 3.15128
+
+# the theoretical V for for d= 11 is 1.8841038793898994
+# the monte carlo approximation for n= 1000000 and d= 11 is 1.9968
