@@ -19,4 +19,4 @@ def highorderV(n,d):
     return Vmontecarlo   
 highorderV(100000,2)
 print()
-highorderV(100000,11)
+highorderV(1000000,11)
