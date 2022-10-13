@@ -38,3 +38,7 @@ if __name__ == "__main__":
     end=pc()
     print(f"Time required with multiprocessing is {round(end-start, 2)} seconds")
     print("Calculated V without multiprocessing:",k/10)
+# Time required without multiprocessing is 45.68 seconds
+# Calculated V without multiprocessing: 1.8581504
+# Time required with multiprocessing is 15.59 seconds
+# Calculated V without multiprocessing: 1.8673663999999999
